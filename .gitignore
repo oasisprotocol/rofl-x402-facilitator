@@ -1,0 +1,23 @@
+# Rust
+/target
+
+# Claude Code
+.claude/
+# Note: Cargo.lock is tracked for reproducible builds (important for TEE attestation)
+
+# Environment files with secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.orc

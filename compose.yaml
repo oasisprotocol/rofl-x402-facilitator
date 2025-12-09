@@ -1,0 +1,15 @@
+services:
+  facilitator:
+    build: .
+    image: "docker.io/ptrusr/trustless-x402-facilitator"
+    platform: linux/amd64
+    volumes:
+      - /run/rofl-appd.sock:/run/rofl-appd.sock # appd REST API for ROFL KMS
+    ports:
+      - "8080:8080"
+    annotations:
+      net.oasis.proxy.ports.8080.custom_domain: x402.updev.si
+    environment:
+      - SIGNER_TYPE=private-key
+      - RPC_URL_BASE_SEPOLIA=https://sepolia.base.org
+      - RPC_URL_SOLANA_DEVNET=https://api.devnet.solana.com

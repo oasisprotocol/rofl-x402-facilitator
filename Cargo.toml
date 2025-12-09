@@ -1,0 +1,94 @@
+[package]
+name = "trustless-x402-facilitator"
+version = "0.1.0"
+edition = "2024"
+default-run = "trustless-x402-facilitator"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "trustless_x402_facilitator"
+path = "src/lib.rs"
+
+[[bin]]
+name = "trustless-x402-facilitator"
+path = "src/main.rs"
+
+[dependencies]
+x402-rs = { git = "https://github.com/x402-rs/x402-rs" }
+tokio = { version = "1.48", features = ["full"] }
+axum = "0.8"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+anyhow = "1.0"
+dotenvy = "0.15"
+env_logger = "0.11"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+hex = "0.4"
+ed25519-dalek = "2"
+bs58 = "0.5"
+reqwest = { version = "0.12", features = ["json"] }
+alloy = { version = "1", features = ["full", "signer-local"] }
+rand = "0.8"
+base64 = "0.22"
+x402-reqwest = { git = "https://github.com/x402-rs/x402-rs" }
+solana-sdk = "2.3.1"
+solana-client = "2.3.7"
+spl-associated-token-account = "7.0.0"
+spl-token = "8.0.0"
+
+[[bin]]
+name = "gen_test_keys"
+path = "src/bin/gen_test_keys.rs"
+
+[[bin]]
+name = "convert_solana_key"
+path = "src/bin/convert_solana_key.rs"
+
+[[bin]]
+name = "e2e_test"
+path = "src/bin/e2e_test.rs"
+
+[[bin]]
+name = "check_usdc_domain"
+path = "src/bin/check_usdc_domain.rs"
+
+[[bin]]
+name = "verify_sig"
+path = "src/bin/verify_sig.rs"
+
+[[bin]]
+name = "check_typehash"
+path = "src/bin/check_typehash.rs"
+
+[[bin]]
+name = "query_typehash"
+path = "src/bin/query_typehash.rs"
+
+[[bin]]
+name = "manual_sig"
+path = "src/bin/manual_sig.rs"
+
+[[bin]]
+name = "check_usdc_status"
+path = "src/bin/check_usdc_status.rs"
+
+[[bin]]
+name = "debug_call"
+path = "src/bin/debug_call.rs"
+
+[[bin]]
+name = "e2e_test_solana"
+path = "src/bin/e2e_test_solana.rs"
+
+[[bin]]
+name = "create_ata"
+path = "src/bin/create_ata.rs"
+
+[features]
+default = []
+
+[patch.crates-io]
+x402-rs = { git = "https://github.com/x402-rs/x402-rs" }
