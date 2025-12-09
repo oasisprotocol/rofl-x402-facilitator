@@ -15,6 +15,8 @@ Private keys are generated inside the TEE using [ROFL KMS](https://docs.oasis.io
 ### Verifiable Execution
 Anyone can verify exactly what code is running by checking the ROFL registry on Oasis Sapphire. To verify:
 
+> **Note:** Requires [Oasis CLI](https://github.com/oasisprotocol/cli) version 0.18+ or commit [1323206](https://github.com/oasisprotocol/cli/commit/1323206bcc66da9cd6b6725049d78d98974a749a) or later.
+
 ```bash
 # Clone this repository and verify it matches the deployed instance
 oasis rofl build --verify --deployment testnet
