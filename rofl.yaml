@@ -2,7 +2,7 @@ name: trustless-x402-facilitator
 version: 0.1.0
 repository: https://github.com/oasisprotocol/rofl-x402-facilitator
 author: Peter Us <peter@u-s.si>
-description: A verifiable, private AI document summarization service that uses blockchain micropayments (x402 protocol) and runs inside a ROFL trusted execution environment on the Oasis Network.
+description: A trustless x402 payment facilitator that runs inside a ROFL trusted execution environment on the Oasis Network.
 tee: tdx
 kind: container
 resources:
@@ -36,8 +36,8 @@ deployments:
           min_tcb_evaluation_data_number: 18
           tdx: {}
       enclaves:
-        - id: uz8Sci862PIEtwnO1Zkcne3pwLh0zywsV41yNVL+YPQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-        - id: laINZO7oBZMgFa7I52NSr4/ZQSmQUYYSlFF8GI7k7JkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: lkmJWLytwAS35BwH8Hg+74Up2hcMmunBZ9N03Ql8K3cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: ETXzn69gz59pyCdCPXJHIyMy6t/TfmLSnaZ/GHq+XbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
       endorsements:
         - any: {}
       fees: endorsing_node
