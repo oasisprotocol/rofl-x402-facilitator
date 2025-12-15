@@ -4023,6 +4023,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "oasis-rofl-client"
+version = "0.1.0"
+source = "git+https://github.com/oasisprotocol/oasis-sdk?branch=ZigaMr%2Ffeat%2Frofl-client-rs#3c842984bc25083753b19bdb09e8c3df290fddf9"
+dependencies = [
+ "hex",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
 name = "oid-registry"
 version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -8742,6 +8755,7 @@ dependencies = [
  "ed25519-dalek 2.2.0",
  "env_logger 0.11.8",
  "hex",
+ "oasis-rofl-client",
  "rand 0.8.5",
  "reqwest",
  "serde",

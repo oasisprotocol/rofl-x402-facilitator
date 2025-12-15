@@ -16,6 +16,7 @@ path = "src/main.rs"
 
 [dependencies]
 x402-rs = { git = "https://github.com/x402-rs/x402-rs" }
+oasis-rofl-client = { git = "https://github.com/oasisprotocol/oasis-sdk", branch = "ZigaMr/feat/rofl-client-rs" }
 tokio = { version = "1.48", features = ["full"] }
 axum = "0.8"
 tower-http = { version = "0.6", features = ["cors", "trace"] }

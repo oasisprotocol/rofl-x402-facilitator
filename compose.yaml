@@ -1,7 +1,7 @@
 services:
   facilitator:
     build: .
-    image: "docker.io/ptrusr/trustless-x402-facilitator@sha256:d40b0b407f49bb1e82c35afbf71a1a7c448a24aef94e7b8e90044103f5120563"
+    image: "docker.io/ptrusr/trustless-x402-facilitator@sha256:5e2dc33dc466206ca792502c9808b6a87d784cd466216a3afc55fcd6de5f34fc"
     platform: linux/amd64
     volumes:
       - /run/rofl-appd.sock:/run/rofl-appd.sock # appd REST API for ROFL KMS
